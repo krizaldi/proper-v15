@@ -191,8 +191,8 @@ class SaleOrderLine(models.Model):
         for record in self:
             existencia = ""
             if record.product_id:
-                zero = sum(record.product_id.stock_quant_ids.filtered(lambda x: x.location_id.id == 187).mapped('available_quantity'))
-                zero1 = sum(record.product_id.stock_quant_ids.filtered(lambda x: x.location_id.id == 187).mapped('reserved_quantity'))
+                zero = sum(record.product_id.stock_quant_ids.filtered(lambda x: x.location_id.id == 8).mapped('available_quantity'))
+                zero1 = sum(record.product_id.stock_quant_ids.filtered(lambda x: x.location_id.id == 20).mapped('reserved_quantity'))
                 # one=sum(record.product_id.stock_quant_ids.filtered(lambda x:x.location_id.id==18).mapped('available_quantity'))
                 market = sum(record.product_id.stock_quant_ids.filtered(lambda x: x.location_id.id == 80).mapped('available_quantity'))
                 market1 = sum(record.product_id.stock_quant_ids.filtered(lambda x: x.location_id.id == 80).mapped('reserved_quantity'))
